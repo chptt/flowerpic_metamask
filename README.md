@@ -3,7 +3,7 @@
 A clean and modern flower shop frontend built with React and Vite.
 
 ## Features
-- **Flower Gallery**: Browse 15 beautiful flower arrangements with images, names, and prices in USD.
+- **Flower Gallery**: Browse beautiful flower arrangements with images, names, and prices in USD.
 - **Shopping Cart**: Add multiple flowers to your cart and see the total price.
 - **Easy Checkout**: Complete your purchase with a simple checkout process.
 - **Responsive Design**: Works on desktop and mobile devices.
