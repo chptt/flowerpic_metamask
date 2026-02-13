@@ -1,115 +1,42 @@
-# Picture Gallery - Flower Photography
+# Bloom & Petal Flower Shop
 
-A modern e-commerce frontend for buying flower photography pictures. Built with React and Vite.
+A clean and modern flower shop frontend built with React and Vite.
 
-## 🌐 Live Demo
-[View Live Site](https://flowerpictures.vercel.app)
+## Features
+- **Flower Gallery**: Browse beautiful flower arrangements with images, names, and prices in USD.
+- **Shopping Cart**: Add multiple flowers to your cart and see the total price.
+- **Easy Checkout**: Complete your purchase with a simple checkout process.
+- **Responsive Design**: Works on desktop and mobile devices.
+- **Dark Mode Support**: Automatically adapts to your system's color scheme.
 
-## 📋 Project Overview
-This is a simple frontend application for buying pictures from a website where buyers can select multiple pictures. The portal displays different pictures with their prices alongside a buy button. When buyers click the "Buy" button, pictures are added to the shopping cart where the total price is displayed. When the "Pay" button is clicked, purchased pictures are removed from the website.
+## Tech Stack
+- **React**: Frontend library.
+- **Vite**: Fast build tool and dev server.
+- **CSS3**: Modern styling with Flexbox and Grid.
 
-## ✨ Features
-- **Picture Gallery**: Browse 12 beautiful flower photography images
-- **Price Display**: Each picture shows its price in USD alongside a "Buy" button
-- **Shopping Cart**: Dropdown cart in header with item count badge
-- **Add to Cart**: Click "Buy" to add pictures to your shopping cart
-- **Total Price**: Real-time calculation of total price in cart
-- **Purchase Flow**: "Pay Now" button completes purchase and removes items from gallery
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Dark Mode Support**: Automatically adapts to system color scheme
-- **No Persistence**: Resets on page refresh for easy testing
+## Project Details
+- This is a **frontend-only** flower shop.
+- **No persistent storage** (localStorage, Database, or Backend) is used. All state is managed via React `useState`.
+- **Ready for backend integration**: The current cart and checkout logic can be easily connected to a payment processor and order management system.
 
-## 🛠️ Tech Stack
-- **React 18** - Frontend library
-- **Vite** - Build tool and dev server
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)** - Core functionality
-
-## 📦 Project Structure
-```
-picture-gallery/
-├── public/
-│   └── images/          # Flower photography images
-├── src/
-│   ├── components/
-│   │   ├── Cart.jsx     # Shopping cart dropdown component
-│   │   └── FlowerCard.jsx  # Picture card component
-│   ├── App.jsx          # Main application component
-│   ├── App.css          # Application styles
-│   ├── data.js          # Picture data (name, price, image)
-│   └── main.jsx         # Application entry point
-└── package.json
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   cd picture-gallery
+## Customizing Images
+To use your own flower images:
+1. Place your image files in the `public/images/` folder (e.g., `public/images/flower1.jpg`).
+2. Update the `image` path in `src/data.js` to point to the file relative to the public root:
+   ```javascript
+   image: "/images/flower1.jpg"
    ```
 
-2. Install dependencies:
+## Getting Started
+
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Run the development server:
+2. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. Open your browser to `http://localhost:5173`
-
-### Build for Production
-```bash
-npm run build
-```
-
-## 🎯 Key Implementation Details
-
-### No Backend Integration
-- **Frontend only** - Pure React application
-- **No API calls** - No fetch/axios requests
-- **No database** - All data in `src/data.js`
-- **No persistent storage** - No localStorage, sessionStorage, or cookies
-- **State management** - React `useState` hooks only
-
-### Testing
-The application can be tested multiple times by simply refreshing the page, which resets all state to the initial configuration.
-
-## 📝 Requirements Met
-✅ Simple frontend for buying pictures  
-✅ Multiple picture selection capability  
-✅ Pictures displayed with prices and buy button  
-✅ Shopping cart with total price display  
-✅ Pay button functionality  
-✅ Pictures removed from website after purchase  
-✅ No persistent storage (resets on refresh)  
-✅ No backend integration required  
-
-## 🎨 Customization
-
-To use your own images:
-1. Place image files in `public/images/` folder
-2. Update the `INITIAL_FLOWERS` array in `src/data.js`:
-   ```javascript
-   {
-     id: 1,
-     name: "Your Picture Name",
-     price: 29.99,
-     image: "/images/your-image.jpg"
-   }
-   ```
-
-## 📄 License
-This project is open source and available for educational purposes.
-
-## 👤 Author
-Developed as a frontend assessment project.
+3. Open your browser to the URL shown in the terminal (usually `http://localhost:5173`).
