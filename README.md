@@ -2,6 +2,9 @@
 
 A clean and modern flower shop frontend built with React and Vite.
 
+## Live Demo
+🌐 [View Live Site](https://flowerpictures.vercel.app)
+
 ## Features
 - **Flower Gallery**: Browse beautiful flower arrangements with images, names, and prices in USD.
 - **Shopping Cart**: Add multiple flowers to your cart and see the total price.
