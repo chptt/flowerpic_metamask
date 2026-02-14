@@ -22,7 +22,7 @@ const Cart = ({ cartItems, onCheckout, onClose }) => {
                 <img src={item.image} alt={item.name} className="cart-item-image" />
                 <div className="cart-item-info">
                   <p className="cart-item-name">{item.name}</p>
-                  <p className="cart-item-price">${item.price.toFixed(2)}</p>
+                  <p className="cart-item-price">{item.price} ETH</p>
                 </div>
               </div>
             ))}
@@ -31,7 +31,7 @@ const Cart = ({ cartItems, onCheckout, onClose }) => {
           <div className="cart-summary">
             <div className="cart-total">
               <span>Total:</span>
-              <strong>${totalPrice.toFixed(2)}</strong>
+              <strong>{totalPrice.toFixed(4)} ETH</strong>
             </div>
             <button className="pay-btn" onClick={onCheckout}>
               Pay Now

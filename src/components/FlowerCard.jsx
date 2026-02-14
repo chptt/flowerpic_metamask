@@ -6,7 +6,7 @@ const FlowerCard = ({ flower, onAddToCart }) => {
       <img src={flower.image} alt={flower.name} className="nft-image" />
       <div className="nft-info">
         <h3>{flower.name}</h3>
-        <p className="price">${flower.price.toFixed(2)}</p>
+        <p className="price">{flower.price} ETH</p>
         <button 
           className="add-to-cart-btn" 
           onClick={() => onAddToCart(flower)}
