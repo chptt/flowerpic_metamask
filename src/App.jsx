@@ -96,11 +96,11 @@ function App() {
 
     // Send ETH transaction
     try {
-      // Calculate total price for display only
+      // Calculate total price in ETH
       const totalEth = cart.reduce((total, item) => total + item.price, 0);
       
-      // ALWAYS send 0.000001 ETH for testing (regardless of cart total)
-      const weiValue = BigInt(1000000000000); // 0.000001 ETH = 1,000,000,000,000 wei
+      // Convert ETH to wei using BigInt (1 ETH = 10^18 wei)
+      const weiValue = BigInt(Math.floor(totalEth * 1e18));
       const valueHex = '0x' + weiValue.toString(16);
 
       // REPLACE THIS WITH YOUR TEST WALLET ADDRESS
@@ -109,7 +109,7 @@ function App() {
       const transactionParameters = {
         from: walletAddress,
         to: recipientAddress,
-        value: valueHex, // Fixed 0.000001 ETH for testing
+        value: valueHex, // Actual cart total in wei
       };
 
       // Send transaction
@@ -119,7 +119,7 @@ function App() {
       });
 
       // Transaction successful!
-      alert(`Transaction successful!\nDisplayed: ${totalEth.toFixed(4)} ETH\nActual sent: 0.000001 ETH (test mode)\nHash: ${txHash}\n\nYour NFTs are now owned by you!`);
+      alert(`Transaction successful!\nAmount: ${totalEth.toFixed(4)} ETH\nHash: ${txHash}\n\nYour NFTs are now owned by you!`);
 
       // Update ownership - remove purchased items from the website
       const cartIds = cart.map(item => item.id);
