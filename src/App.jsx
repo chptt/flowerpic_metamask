@@ -119,7 +119,7 @@ function App() {
       });
 
       // Transaction successful!
-      alert(`Transaction successful!\nAmount: ${totalEth.toFixed(4)} ETH\nHash: ${txHash}\n\nYour NFTs are now owned by you!`);
+      alert(`Transaction successful!\nAmount: ${totalEth.toFixed(9)} ETH\nHash: ${txHash}\n\nYour NFTs are now owned by you!`);
 
       // Update ownership - remove purchased items from the website
       const cartIds = cart.map(item => item.id);

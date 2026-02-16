@@ -31,7 +31,7 @@ const Cart = ({ cartItems, onCheckout, onClose }) => {
           <div className="cart-summary">
             <div className="cart-total">
               <span>Total:</span>
-              <strong>{totalPrice.toFixed(4)} ETH</strong>
+              <strong>{totalPrice.toFixed(9)} ETH</strong>
             </div>
             <button className="pay-btn" onClick={onCheckout}>
               Pay Now
